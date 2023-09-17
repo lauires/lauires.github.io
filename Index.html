@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eirene</title>
+    <link rel="icon" href="fecffd428c7423621ea1d4173d351edd.jpg">
+    <link rel="stylesheet" href="styles.css?v=11">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="card">
+        <div class="upper">
+          <img src="animesher.com_sakura-gif-animation-1976111.gif" alt="">
+        </div>
+        <div class="picture">
+            <img src="fecffd428c7423621ea1d4173d351edd.jpg" alt="">
+          </div>
+        <div class="name">Eirene</div>
+        <div class="description">Live alone, die alone.</div>
+        <div class="social">
+            <a href="https://www.instagram.com/efexxd0/" class="fab fa-instagram" target="_blank"></a>
+            <a href="https://www.youtube.com/@eirene8373" class="fab fa-youtube" target="_blank"></a>
+            <a href="https://open.spotify.com/user/31aio7ixmxharwk2eeolhvdhtqoi?si=a2cdb79620524619" class="fab fa-spotify" target="_blank"></a>
+            <a href="https://steamcommunity.com/id/eirenexd/" target="_blank"><i class="fa-brands fa-steam"></i></a>
+            <button id="copys" value="lauiress" onclick="copysw()"><a href="#" class="fab fa-discord"></a></button>
+        </div>
+
+        <div class="main-spotify">
+            <img src="e471aef77696808ed1ac577215d8b668.jpg" class="song-image" alt="">
+            <div class="song-name-area">
+                <p class="song-name font-extra-bold"></p>
+                <p class="song-author">allah eirene</p>
+                <div class="song-duration-area">
+                    <span class="song-progress font-light">0:00</span>
+                    <input class="song-range" disabled="" type="range" value="0" min="0" max="100">
+                    <span class="song-duration font-light">0:00</span>
+                </div>
+            </div>
+            
+        </div>
+       
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/songapi.js?v=148"></script>
+
+    </div>
+
+    <div class="copy-enable">
+        <span id="cpenable">Kopyalandı</span>
+    </div>
+
+    <script>
+        const cp = document.getElementById('copys');
+        const cop = document.getElementById('cpenable');
+        cp.addEventListener('click', (event) => {
+            cop.style.visibility = "visible";
+            cop.style.transition = "0.5s all"
+            navigator.clipboard.writeText(cp.value);
+            var seconds = 0;
+            var Interval;
+            clearInterval(Interval);
+            Interval = setInterval(startTimer, 1000);
+
+            function startTimer() {
+                seconds++;
+                if(seconds <= 5){
+                 clearInterval(Interval);
+                 seconds = 0;
+                 cop.style.visibility = "hidden";
+                 cop.style.transition = "0.5s all"
+                }
+            }
+
+        })
+    </script>
+
+    
+
+    
+</body>
+</html>
